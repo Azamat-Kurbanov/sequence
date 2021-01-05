@@ -9,8 +9,10 @@ defmodule Sequence.Application do
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: Sequence.Worker.start_link(arg)
-      {Sequence.Stash, 123},
-      {Sequence.Server, nil}
+      # {Sequence.Stash, Application.get_env(:sequence, :initial_number)},
+      # {Sequence.Server, nil}
+      # Start Task in supervisor
+      {MyTask, 123}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
