@@ -4,8 +4,6 @@ defmodule Sequence.Server do
 
   @vsn "1"
 
-  alias Sequence.Impl
-
   defmodule State do
     defstruct current_number: 0, delta: 1
   end
